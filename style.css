@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider img {
+  max-width: 100%;
+  transition: transform 0.3s;
+}
+
+ion-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.4s;
+}
+
+ion-icon:hover {
+  scale: 1.1;
+}
+
+#prev {
+  left: 20px;
+}
+
+#next {
+  right: 20px;
+}
+
+@media only screen and (max-width: 860px) {
+  .slider {
+    width: 99%;
+  }
+}
